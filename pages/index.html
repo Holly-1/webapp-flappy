@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Katie's Superman Game</title>
+    <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+
+<body>
+<script type="text/javascript" src="../lib/phaser.min.js"></script>
+<script type="text/javascript" src="../js/flappy.js"></script>
+<h1>Katie's Superman Game</h1>
+    <h2>Welcome to the best Superman game there is!</h2>
+
+    </p>
+
+    <!--<p> Comment not shown</p>-->
+    <div id="greeting">
+        <form id="greeting-form" class="form-inline" method="post" action="/score">
+            <div class="form-group">
+                <label for="fullName">What's your name?</label>
+                <input type="text" id="fullName" class="form-control"
+                       name="fullName" placeholder="Clark">
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" class="form-control"
+                       name="email" placeholder="clarkkent@superman.com">
+                <input type="hidden" id="score" name="score" value="0">
+            </div>
+            <button class="btn btn-default" type="submit">OK</button>
+        </form>
+    </div>
+    <p>The highest scorers are:
+    <ul id="scoreBoard">
+    </ul>
+    </p>
+
+</body>
+
+</html>
