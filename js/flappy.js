@@ -82,7 +82,6 @@ function create() {
     game.time.events
         .loop(pipeInterval * Phaser.Timer.SECOND,
             generatePipe);
-
 }
 
 
