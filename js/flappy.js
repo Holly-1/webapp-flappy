@@ -72,7 +72,8 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.physics.arcade.enable(player);
     player.body.velocity.x = 0;
-    player.body.gravity.y = 300;
+    player.body.gravity.y = 300
+    ;
     player.anchor.setTo(0.5, 0.5);
     first=0;
     generatePipe();
@@ -81,7 +82,6 @@ function create() {
     game.time.events
         .loop(pipeInterval * Phaser.Timer.SECOND,
             generatePipe);
-
 
 }
 
