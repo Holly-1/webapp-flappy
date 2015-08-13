@@ -4,10 +4,9 @@
     <title>Bouncy frog!</title>
     <link rel="stylesheet" href="../assets/style.css"/>
     <link rel="stylesheet" href="../lib/bootstrap.css"/>
-
-    <style>
-        body {background-color:#C7FFEF}
-    </style>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/phaser.min.js"></script>
+    <script src="../js/flappy.js"></script>
 </head>
 
 <body>
@@ -22,29 +21,32 @@
 
             <p id="gamelink">
             <div id="game"> </div>
-            <br> <br>
             </p>
         </div>
         <div class="col-md-3">
 
 
-            <p id ="scoreb">High scores:
-            <ul id="scoreBoard">
-            </ul></p>
+            <p><br></br>
+                High scores:
+            <ul>
+                <li class="gold">Bob</li>
+                <li class="silver">Sarah</li>
+                <li class="bronze">Harry</li>
+            </ul>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <img src="../assets/screenshot2.png"
-                 class="img-rounded img-responsive" />
-        </div>
-        <div class="col-md-4">
             <img src="../assets/screenshot3.png"
                  class="img-rounded img-responsive" />
         </div>
         <div class="col-md-4">
-            <img src="../assets/screenshot4.png"
+            <img src="../assets/screenshot.png"
+                 class="img-rounded img-responsive" />
+        </div>
+        <div class="col-md-4">
+            <img src="../assets/screenshotOver.png"
                  class="img-rounded img-responsive" />
         </div>
     </div>
@@ -52,10 +54,9 @@
 
 <div id="greeting">
 
-    <form id="greeting-form" method="post" action="/score">
+    <form id="greeting-form" class="form-inline">
         <div class="form-group">
-            <h3>Congratulations!</h3>
-            <h4>Save your score</h4>
+            <h3>Save your score</h3>
             <label for="fullName">What's your name?</label>
             <input type="text" id="fullName" class="form-control"
                    name="fullName" placeholder="Bob">
@@ -67,19 +68,16 @@
             <input type="hidden" id="score" name="score" value="0">
 
         </div>
-        <div class="rollovericons">
-
-       <a> <button class="btn btn-default" type="submit">OK</button></a>
-              
-        <a><button class="btn btn-default" type="game.reload">Restart</button></a>
-
-        </div>
+        <button class="btn btn-default" type="submit">OK</button>
     </form>
 </div>
 
 
-<script src="../lib/jquery.js"></script>
-<script src="../lib/phaser.min.js"></script>
-<script src="../js/flappy.js"></script>
+
 </body>
 </html>
+
+
+$.get("/score", function(scores){
+console.log("Data: ",scores);
+});

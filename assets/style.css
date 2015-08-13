@@ -1,0 +1,46 @@
+
+
+
+h1 {
+    color: darkblue;
+    font-size: 30px;
+
+}
+
+.gold {
+    color:#e3a600
+}
+
+.silver {
+    color:gray
+}
+
+.bronze {
+    color:brown
+}
+
+#gamelink {text-align: center;
+
+}
+
+#greeting {
+    position: absolute;
+    left: 22%;
+    top: 35%;
+    background: #fff;
+    width: 350px;
+    height: 300px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+}
+
+
+#scoreb {font-size: 140%;}
+#scoreBoard {font-size: 120%;}
+
+
+.rollovericons a{
+    margin: 40px;
+}
